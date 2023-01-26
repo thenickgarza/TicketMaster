@@ -4,27 +4,17 @@
       <div class="container mt-3">
         <h1 class="mb-3">Add A Ticket
         </h1>
-        <%= form_with model: @ticket do |form| %>
-  <div>
-    <%= form.label :ticket_number %><br>
-    <%= form.text_area :ticket_number %><br>
-  </div>
-  <div>
-    <%= form.submit class: 'btn btn-success btn-sm' %>
-  </div>
-<% end %>
-
-<%= link_to "Create", new_ticket_path(@ticket), :class => "btn btn-success", id: "create-number"%>
+        <%= link_to "Create", new_ticket_path(@ticket), :class => "btn btn-success", id: "create-number"%>
       </div>
     </div>
     <div class ="col d-flex justify-content-center">
-    <div class="container mt-3">
-      <h1>Your Tickets
-      </h1>
-      <% @user.each do |ticket| %>
-    <p> <strong> <%=ticket.ticket_number%> <strong> </p>
-        <% end %>
+      <div class="container mt-3">
+        <h1>Your Tickets
+        </h1>
+        <% @user.each do |ticket| %>
+          <p> <strong> <%=ticket.ticket_number%> <strong> </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
-</div>
