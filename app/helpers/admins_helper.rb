@@ -1,7 +1,4 @@
-class Ticket < ApplicationRecord
-    belongs_to :user 
-
-    validates :ticket_number, presence: :true
+module AdminsHelper
 
     def generate_random_ticket
         

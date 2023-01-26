@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   resources :users 
    resources :tickets
+
+   resources :admins
+
   
   resources :sessions, except:[:index, :edit, :update, :show, :new, :destroy]
 
