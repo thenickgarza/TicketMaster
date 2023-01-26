@@ -1,4 +1,4 @@
-<%= form_with model: @ticket do |form| %>
+<%= form_with model: [@user, @ticket] do |form| %>
   <div>
     <%= form.label :ticket_number %><br>
     <%= form.text_area :ticket_number %><br>

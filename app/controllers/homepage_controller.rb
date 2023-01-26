@@ -1,8 +1,12 @@
 class HomepageController < ApplicationController
   
-  before_action :authenticate_user!
   
   def index
+  end
+
+  def show_tickets
+    @ticket = User.find_by(id: current_user.id)
+      @ticket = @ticket.tickets.all 
   end
 
 end
