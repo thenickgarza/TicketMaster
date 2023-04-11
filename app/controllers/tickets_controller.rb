@@ -34,6 +34,7 @@ class TicketsController < ApplicationController
         @ticket = Ticket.find_by(params[:id])  
     end
 
+
     private 
 
     def set_user
